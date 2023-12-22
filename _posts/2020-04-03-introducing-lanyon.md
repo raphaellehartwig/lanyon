@@ -71,7 +71,7 @@ Now that we defined what makes a movie a big hit, let’s check there distributi
 
 Exactly as expected, isn't it? Blockbuster movies are clearly more successful than the other average movies.
 
-## Blockbuster actors: famous or low-key ?
+## Characteristics of blockbuster actors
 Let’s look at the major differences between blockbuster actors and moderate actors and see if we can uncover some secrets
 
 <p><img src="imgs/gender.png" style="width: 80%; margin: 0 auto;" /></p>
@@ -88,7 +88,7 @@ Let’s look if there’s a difference between the age of the career peak betwee
 
 Looks like actors in big hits usually hit their peak at an older age than those who don't star in big hits. 
 
-<p><img src="imgs/peak_age.png" style="width: 80%; margin: 0 auto;" /></p>
+<p><img src="imgs/career_longevity2.png" style="width: 80%; margin: 0 auto;" /></p>
 
 ### It's a match !
 
@@ -97,8 +97,8 @@ Let’s compare the characteristics of blockbuster actors to those of less-well 
 <p><img src="imgs/matching.jpeg" style="width: 60%; margin: 0 auto;" /></p>
 
 
-### Career longevity
-How about the career longevity of an actor ? Do you have more chances to have a long career if you’ve played in a big hit movie ?Let’s look at the career lifespans of actors that played in blockbusters versus the others. 
+#### How long does an actor last ?
+Do you have more chances to have a long career if you’ve played in a big hit movie ? Let’s look at the career lifespans of actors that played in blockbusters versus the others. 
 
 <p><img src="imgs/longevity_distribution.png" style="width: 80%; margin: 0 auto;" /></p>
 
@@ -106,15 +106,16 @@ Charting the journey of actors from their screen debut to their latest act, a st
 
 <img src="imgs/sean_connery.jpeg" style="width: 30%; margin: 0 auto;" />
 
-### Movie counts
-In the next exciting chapter of our data-driven story, we shifted the focus to the number of movies each actor has starred in. Our investigation uncovered a notable distinction: actors in big hits (the Treatment Group) tend to have a higher average number of movie appearances (16 on average) compared to actors who haven't starred in big hits (7 on average). The results of Welch's t-test, yielding a p-value of 0.0, emphasize a significant difference in movie counts between the two actor groups. This reinforces our earlier findings: actors in big hits not only experience a momentary surge in fame but are likely to have more extensive filmographies compared to their colleagues without big-hit experiences.
+#### Do blockbuster actors play in a lot of movies?
+
+In the next chapter of our data-driven story, we shift the focus to the number of movies each actor has starred in. Our investigation uncovers a notable distinction: actors in big hits (the Treatment Group) tend to have a higher average number of movie appearances (16 on average) compared to actors who haven't starred in big hits (7 on average). The results of Welch's t-test, yielding a p-value of 0.0, emphasize a significant difference in movie counts between the two actor groups. This reinforces our earlier findings: actors in big hits not only experience a momentary surge in fame but are likely to have more extensive filmographies compared to their colleagues without big-hit experiences.
 
 <p><img src="imgs/movie_counts.png" style="width: 80%; margin: 0 auto;" /></p>
 
 The median line in the blue box, which represents our Treatment Group (actors in big hits), is noticeably higher than its counterpart. The range of movie counts, especially on the higher side, is broader in the Treatment Group, indicating a more varied and often prolific career span among these actors. Another interesting point is the group's outliers—actors with exceptionally high movie counts—reinforcing the idea that a role in a big hit can lead to a more diverse and prolific acting career.
 
 ## Career analysis
-
+### Success
 Let's examine the average success for movies arranged chronologically.
 
 <p><img src="imgs/movie_counts.png" style="width: 80%; margin: 0 auto;" /></p>
@@ -124,6 +125,8 @@ The median success values follow a similar pattern before the big hit, but here'
 P-values for Wilcoxon tests also confirm that the movie success value of actors after they played in their first big hit is higher than the rest of the actors.
 
 Finally, let's look at the character role evolution in our actors careers
+
+### Does a big hit influence an actor's roles over their career ?
 
 <p><img src="imgs/movie_counts.png" style="width: 80%; margin: 0 auto;" /></p>
 
