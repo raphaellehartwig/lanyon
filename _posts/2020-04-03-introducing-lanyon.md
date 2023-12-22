@@ -25,15 +25,11 @@ layout: post
 ## Introduction
 Ever wondered what happens after the blockbuster applause fades ?
 
-Is it a straight road to more box office triumphs, or does the plot take unexpected turns ? Do actors try on new roles and genres, or do they stick to what brought them fame ?
+Get ready for the big reveal, we're digging deep into the lasting effects of blockbuster stardom. Through this investigation, we’ll make the focus on blockbuster actors compared to less well-known actors, to uncover the patterns of the most noteworthy aspect of their professional journey.
 
-Get ready for the big reveal, we're digging deep into the lasting effects of blockbuster stardom. 
+Is it a straight road to more box office triumphs, or does the plot take unexpected turns ?
 
-Join us on a journey through Hollywood's reel-life drama as we tackle burning questions about actors post-blockbuster. Through this investigation, we’ll make the focus on blockbuster actors compared to less well-known actors, to uncover the patterns of the most noteworthy aspect of their professional journey.
-
-We’ll take a look at the most successful blockbusters and evaluate the success of their main actors/actresses in following movies. We'll also investigate how the new character type affects the reception by the audience: is an actor/actress less convincing in new role with a persona very far from his/her successful character? Some successful actors/actresses can incarnate a large palette of different roles, whereas some others are stuck to their successful character and have troubles getting out of it.
-
-Get your front-row seat to the blockbuster aftermath, where we untangle the threads of success, genre exploration, and career longevity in the ever-enthralling world of Hollywood.
+We’ll take a look at the most successful blockbuster movies and actors. Get your front-row seat to the blockbuster aftermath, where we untangle the threads of success, career longevity and other critical variables in the ever-enthralling world of Hollywood.
 
 ## Dataset
 The CMU Movie Dataset contains information about more than 40 000 movies, including plot summaries from Wikipedia and metadata from Freebase.
@@ -61,7 +57,7 @@ To define these type of movies, we’ll consider that it has to be an outlier wi
 
 Now that we defined what makes a movie a big hit, let’s check there distribution over the years 
 
-<p><img src="imgs/blockbuster_movies.png" style="width: 80%; margin: 0 auto;" /></p>
+<p><img src="imgs/average_success.png" style="width: 80%; margin: 0 auto;" /></p>
 
 Exactly as expected, isn't it? Blockbuster movies are clearly more successful than the other average movies.
 
@@ -108,23 +104,30 @@ Now let's focus on the quantity of movies each actor has starred in. Our investi
 
 <p><img src="imgs/movie_counts.png" style="width: 80%; margin: 0 auto;" /></p>
 
-The median line in the blue box, which represents our Treatment Group (actors in big hits), is noticeably higher than its counterpart. The range of movie counts, especially on the higher side, is broader in the Treatment Group, indicating a more varied and often prolific career span among these actors. Another interesting point is the group's outliers—actors with exceptionally high movie counts—reinforcing the idea that a role in a big hit can lead to a more diverse and prolific acting career.
+The median line in the blue box, which represents our Treatment Group (actors in big hits), is noticeably higher than its counterpart. The range of movie counts, especially on the higher side, is broader in the Treatment Group, indicating a more varied and often prolific career span among these actors. Another interesting point is the group's outliers—actors with exceptionally high movie counts—reinforcing the idea that a role in a big hit can lead to a more diverse and prolific acting career. 
 
 ## Career analysis
-### Success
-Let's examine the average success for movies arranged chronologically.
+### Evolution of success over career
+Let's examine the average success for movies arranged chronologically where the blockbuster movie is n = 0. Of course you’re gonna think “but what about the actors that.. don’t have a career peak and stay low-key?” Well we’ll take the career peak from blockbuster actors as reference time points, so that we can compare them
 
 <p><img src="imgs/mean_success.png" style="width: 80%; margin: 0 auto;" /></p>
 
-The median success values follow a similar pattern before the big hit, but here's the twist: after the blockbuster moment, the treatment group's median skyrockets, and instead of falling back to its original low, it stabilizes at a slightly higher level for the next movies.
-
-P-values for Wilcoxon tests also confirm that the movie success value of actors after they played in their first big hit is higher than the rest of the actors.
-
-Finally, let's look at the character role evolution in our actors careers
+The medians success values for both groups follow a similar pattern before the big hit event, but here's the twist: at the moment of the blockbuster moment (todelete), the treatment group's median skyrockets, and instead of falling back to its original low, it stabilizes at a slightly higher level for the next movies. However, the two medians are still close to one another even after the big hit event and there is a lot of variability in the two groups and their interquartile range overlaps. This prevents us from having a clear cut and being able to make a strong statement about a difference in the two groups. We can however see that among the big hit actors there is a much wider and variable distribution of the movie revenue (as seen in the previous plot with the numerous high-value outliers).
 
 ### Does a big hit influence an actor's roles over their career ?
 
-<p><img src="imgs/movie_counts.png" style="width: 80%; margin: 0 auto;" /></p>
+Finally, let's look at the character role evolution in our actors careers.
+
+<p><img src="imgs/success2.jpeg" style="width: 80%; margin: 0 auto;" /></p>
+
+Most of the role importance values are equal to zero or very close to zero (note the y-axis log scale). This is because the movie summaries are quite short and lack precision. However, we can still see that in general the big hit actors seem to have a wider and more skewed distribution (toward high values) for the role importance. In addition, we see the distribution of the role importance for the control group is narrowing down to zero movie after movie. In conclusion, this graph tells us that for our dataset, more actors that are in the treatement group recieved important roles than actors in the control group. Hence the distribution of role importance is wider for actors that played in big hits movies but we can’t say anything about the role importance before and after the big hits movies.
 
 ## Conclusion
+This in-depth exploration of post-blockbuster actor careers has revealed significant trends and distinctions. We dived into the aftermath of blockbuster applause to untangle the threads of success, genre exploration, and career longevity in the ever-captivating world of the movie industry.
 
+By defining a film's success as the product of its revenue and average IMDb rating, we identified blockbusters as outliers compared to the average. Blockbuster actors exhibit distinct characteristics, including a male-dominated representation and a generally higher peak career age than their lesser-known counterparts.
+
+By pairing blockbuster actors with their less-known peers based on gender and age, we found that blockbuster actors often have longer careers, highlighting a striking trend.
+
+
+<p><img src="imgs/inception.jpeg" style="width: 70%; margin: 0 auto;"/></p>
