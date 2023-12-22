@@ -57,13 +57,7 @@ The success of a movie will be defined here as the product of the movie revenue 
 ### The blockbuster metric
 It is common to use the term “blockbuster” or “big hit” to describe movies scoring a huge success. They are in fact movies that stand out compared to the others.
 
-To define these type of movies, we’ll consider that it has to be an outlier with respect to our previously defined success metric.
-
-An outlier presents the following characteristic : 
-
-outlier’s success metric > Q3 + 1.5(IQR)
-
-where Q1, Q3 and IQR are respectively the first, third quantiles and the interquantile range
+To define these type of movies, we’ll consider that it has to be an outlier with respect to our previously defined success metric, detected with a threshold depending on first, third quantiles and the interquantile range.
 
 Now that we defined what makes a movie a big hit, let’s check there distribution over the years 
 
@@ -84,11 +78,9 @@ Of course you’re gonna think “but what about the actors that.. don’t have 
 
 Let’s look if there’s a difference between the age of the career peak between blockbuster actors compared to ohter actors
 
-<p><img src="imgs/peak_age.png" style="width: 80%; margin: 0 auto;" /></p>
+<p><img src="imgs/distribution_age_peak.png" style="width: 80%; margin: 0 auto;" /></p>
 
 Looks like actors in big hits usually hit their peak at an older age than those who don't star in big hits. 
-
-<p><img src="imgs/career_longevity2.png" style="width: 80%; margin: 0 auto;" /></p>
 
 ### It's a match !
 
@@ -102,13 +94,17 @@ Do you have more chances to have a long career if you’ve played in a big hit m
 
 <p><img src="imgs/longevity_distribution.png" style="width: 80%; margin: 0 auto;" /></p>
 
-Charting the journey of actors from their screen debut to their latest act, a striking pattern emerges. Actors involved in blockbuster hits tend to have longer careers, averaging a glamorous 22.12 years. In contrast, their counterparts averaged a more modest 15.73 years. This emphasizes the transformative power of a blockbuster role in an actor's career.
+Charting the journey of actors from their acting debut to their latest movie, a striking pattern emerges. Actors involved in blockbuster hits tend to have longer careers, averaging 22.12 years. In contrast, their counterparts averaged a more modest 15.73 years.
+
+The actors in big hits have their median career span outshines the rest of actors. This isn't just a small difference; it's a spotlight on a clear trend - the actors in big hits whose careers have a wider span range and show a more sustained success. While the limelight often favors the blockbuster stars, some non big hits actors  have impressively long careers without having roles in big hit movies. 
+
+This analysis is confirmed by the p-value = 7.48 e-5 < 0.05 found when testing the null-hypothesis stating that there is no difference in the mean career longevity between the two groups. In fact, this value accentuates the importance that a blockbuster plays in the length of an actor's career.
 
 <img src="imgs/sean_connery.jpeg" style="width: 30%; margin: 0 auto;" />
 
 #### Do blockbuster actors play in a lot of movies?
 
-In the next chapter of our data-driven story, we shift the focus to the number of movies each actor has starred in. Our investigation uncovers a notable distinction: actors in big hits (the Treatment Group) tend to have a higher average number of movie appearances (16 on average) compared to actors who haven't starred in big hits (7 on average). The results of Welch's t-test, yielding a p-value of 0.0, emphasize a significant difference in movie counts between the two actor groups. This reinforces our earlier findings: actors in big hits not only experience a momentary surge in fame but are likely to have more extensive filmographies compared to their colleagues without big-hit experiences.
+Now let's focus on the quantity of movies each actor has starred in. Our investigation uncovers a notable distinction: actors in big hits tend to have a higher average number of movie appearances (16 on average) compared to actors who haven't starred in big hits (7 on average). The results of Welch's t-test, yielding a p-value of 0.0, emphasize a significant difference in movie counts between the two actor groups. This reinforces our earlier findings: actors in big hits not only experience a momentary surge in fame but are likely to have more extensive filmographies compared to their colleagues without big-hit experiences.
 
 <p><img src="imgs/movie_counts.png" style="width: 80%; margin: 0 auto;" /></p>
 
@@ -118,7 +114,7 @@ The median line in the blue box, which represents our Treatment Group (actors in
 ### Success
 Let's examine the average success for movies arranged chronologically.
 
-<p><img src="imgs/movie_counts.png" style="width: 80%; margin: 0 auto;" /></p>
+<p><img src="imgs/mean_success.png" style="width: 80%; margin: 0 auto;" /></p>
 
 The median success values follow a similar pattern before the big hit, but here's the twist: after the blockbuster moment, the treatment group's median skyrockets, and instead of falling back to its original low, it stabilizes at a slightly higher level for the next movies.
 
@@ -131,3 +127,4 @@ Finally, let's look at the character role evolution in our actors careers
 <p><img src="imgs/movie_counts.png" style="width: 80%; margin: 0 auto;" /></p>
 
 ## Conclusion
+
