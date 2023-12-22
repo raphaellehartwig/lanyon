@@ -3,6 +3,15 @@ layout: page
 title: The team
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+<div class="message">
+  Hey there! Thank you for reading our data story.
+</div>
+ 
+
+This project is presented to you by the team PinaColADA23 :
+
+- Diego Celio
+- Yassine Abdennadher
+- Raphaëlle Hartwig
+- Abir Hammoumi
+- Xenia Titova
